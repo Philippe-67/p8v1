@@ -1,0 +1,82 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7129"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/products/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7129
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/products",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7129
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/orders/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/orders/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7024
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/orders",
+      "UpstreamHttpMethod": ["Get","Post"],
+      "DownstreamPathTemplate": "/api/orders",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7024
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/customers/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ],
+      "DownstreamPathTemplate": "/api/customers/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7285
+        }
+      ]
+
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/customers",
+      "UpstreamHttpMethod": ["Get", "Post" ],
+      "DownstreamPathTemplate": "/api/customers",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7285
+        }
+      ]
+
+    }
+  ]
+  }
+
