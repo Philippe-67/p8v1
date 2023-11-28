@@ -1,7 +1,7 @@
-﻿namespace Microservice.Authentication.Models
-{
-    public class JwtConfig
-    {
-        public  string Secret { get; set; }
-    }
-}
+﻿//namespace Microservice.Authentication.Models
+//{
+//    public class JwtConfig
+//    {
+//        public string Secret { get; set; }
+//    }
+//}

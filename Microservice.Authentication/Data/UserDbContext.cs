@@ -14,6 +14,8 @@ namespace Microservice.Authentication.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            // Call the SeedRoles method to populate roles
+            SeedRoles(builder);
         }
         private static void SeedRoles(ModelBuilder builder)
         {
